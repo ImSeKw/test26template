@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<jsp:include page="/WEB-INF/views/module/header.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/views/module/headerOne.jsp"></jsp:include>
+<jsp:include page="/WEB-INF/views/module/headerTwo.jsp"></jsp:include>
 
 <section id="services">
 	<div class="container">
@@ -47,30 +48,30 @@
 <section class="p-0" id="portfolio">
 	<div class="container-fluid p-0">
 		<div class="row no-gutters popup-gallery">
-			<c:forEach var="cityList" items="${list}">
+			<c:forEach var="list" items="${list}">
 				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="resources/img/portfolio/fullsize/caterpillar-3107337_1920.jpg">
-						<img class="img-fluid" src="resources/img/portfolio/thumbnails/caterpillar-3107337_650.jpg" alt="">
+					<a href="${pageContext.request.contextPath}/${list.categoryName}/${list.categoryName}List">
+						<img class="img-fluid" src="resources/img/portfolio/thumbnails/${list.categoryNo}_thumbnails.jpg" alt="">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">Category</div>
-								<div class="project-name">City</div>
+								<div class="project-category text-faded">CATEGORY</div>
+								<div class="project-name">${list.categoryName}</div>
 							</div>
 						</div>
 					</a>
 				</div>
 			</c:forEach>
 			<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="resources/img/portfolio/fullsize/caterpillar-3107337_1920.jpg">
-						<img class="img-fluid" src="resources/img/portfolio/thumbnails/caterpillar-3107337_650.jpg" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">Category</div>
-								<div class="project-name">City</div>
-							</div>
+				<a class="portfolio-box" href="resources/img/portfolio/fullsize/caterpillar-3107337_1920.jpg">
+					<img class="img-fluid" src="resources/img/portfolio/thumbnails/caterpillar-3107337_650.jpg" alt="">
+					<div class="portfolio-box-caption">
+						<div class="portfolio-box-caption-content">
+							<div class="project-category text-faded">PHOTO</div>
+							<div class="project-name">Bulldozer</div>
 						</div>
-					</a>
-				</div>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 </section>
