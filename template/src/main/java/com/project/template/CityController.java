@@ -2,6 +2,8 @@ package com.project.template;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,7 @@ import com.project.template.service.CityDao;
 public class CityController {
 	@Autowired
 	CityDao cityDao;
+	private static final Logger logger = LoggerFactory.getLogger(CityController.class);
 	
 	// 도시 삭제
 	@RequestMapping(value = "/city/deleteCity", method = RequestMethod.GET)
@@ -53,9 +56,13 @@ public class CityController {
 	}
 	
 	// 도시 전체 조회
-	@RequestMapping(value = "/city/cityList", method = RequestMethod.GET)
+	@RequestMapping(value = "/City/CityList", method = RequestMethod.GET)
 	public String cityList(Model model) {
+		logger.debug("cityList CityController.java");
 		List<City> list = cityDao.selectCityList();
+		for(City c : list) {
+			logger.debug("{} : City cityList CityController.java", c.getCityName());
+		}
 		model.addAttribute("list", list);
 		return "city/cityList";
 	}

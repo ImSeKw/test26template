@@ -1,33 +1,69 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/WEB-INF/views/module/headerOne.jsp"></jsp:include>
 <jsp:include page="/WEB-INF/views/module/headerTwo.jsp"></jsp:include>
 
-<table class="table table-hover">
-	<thead class="mdb-color darken-3">
-		<tr class="text-white">
-			<td><strong>No.</strong></td>
-			<td><strong>CITY</strong></td>
-			<td><strong>UPDATE</strong></td>
-			<td><strong>DELETE</strong></td>
-		</tr>
-	</thead>
-	<tbody>
-		<c:forEach var="cityList" items="${list}">
-			<tr>
-				<td><strong>${cityList.cityId}</strong></td>
-				<td><strong>${cityList.cityName}</strong></td>
-				<td><a href="${pageContext.request.contextPath}/city/updateCity?cityId=${cityList.cityId}" class="btn rgba-teal-strong"role="button"><i class="fa fa-wrench fa-3x" aria-hidden="true"></i></a></td>
-				<td><a href="${pageContext.request.contextPath}/city/deleteCity?cityId=${cityList.cityId}" class="btn rgba-red-strong"role="button"><i class="fa fa-times-circle fa-1g" aria-hidden="true"></i></a></td>
-			</tr>
-		</c:forEach>
-	</tbody>
-</table>
+<section id="services">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2 class="section-heading">At Your Service</h2>
+				<hr class="my-4">
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-6 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+					<h3 class="mb-3">Sturdy Templates</h3>
+					<p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+					<h3 class="mb-3">Ready to Ship</h3>
+					<p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+					<h3 class="mb-3">Up to Date</h3>
+					<p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 text-center">
+				<div class="service-box mt-5 mx-auto">
+					<i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+					<h3 class="mb-3">Made with Love</h3>
+					<p class="text-muted mb-0">You have to make your websites with love these days!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
-<a href="${pageContext.request.contextPath}/" class="btn rgba-pink-strong" role="button">
-	<i class="fa fa-home" aria-hidden="true"></i>
-</a>
-<a href="${pageContext.request.contextPath}/city/insertCity" class="btn rgba-blue-strong" role="button">
-	<i class="fa fa-plus-circle" aria-hidden="true"></i>
-</a>
+<section class="p-0" id="portfolio"> <!-- id="portfolio" -->
+	<div class="container-fluid p-0">
+		<div class="row no-gutters popup-gallery">
+			<c:forEach var="list" items="${list}">
+				<div class="col-lg-4 col-sm-6">
+					<a class="portfolio-box" href="<c:url value="resources/img/portfolio/fullsize/1.jpg"/>">
+						<img class="img-fluid" src="<c:url value="resources/img/portfolio/thumbnails/1.jpg"/>" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">CITY</div>
+								<div class="project-name">${list.cityName}</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</c:forEach>
+		</div>
+	</div>
+</section>
 
 <jsp:include page="/WEB-INF/views/module/bottom.jsp"></jsp:include>

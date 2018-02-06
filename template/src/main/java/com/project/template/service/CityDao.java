@@ -3,6 +3,8 @@ package com.project.template.service;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -10,8 +12,9 @@ import org.springframework.stereotype.Repository;
 public class CityDao {
 	@Autowired
 	SqlSessionTemplate sqlSessionTemplate;
+	private static final Logger logger = LoggerFactory.getLogger(CityDao.class);
 	// namespace (중복 처리)
-	private final String NAMESPACE = "com.project.template.service.";
+	private final String NAMESPACE = "com.project.template.service.CityMapper.";
 	
 	// 도시 삭제
 	public void deleteCity(City city) {
@@ -35,6 +38,11 @@ public class CityDao {
 	
 	// 전체 도시 목록
 	public List<City> selectCityList() {
-		return sqlSessionTemplate.selectList(NAMESPACE + "selectCityList");
+		logger.debug("selectCityList CityDao.java");
+		List<City> list = sqlSessionTemplate.selectList(NAMESPACE + "selectCityList");
+		for(City c : list) {
+			logger.debug("{} : City selectCityList CityDao.java", c.getCityName());
+		}
+		return list;
 	}
 }

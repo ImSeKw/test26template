@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 	<section id="contact">
 		<div class="container">
@@ -24,15 +25,15 @@
 	</section>
 
 	<!-- Bootstrap core JavaScript -->
-	<script src="resources/vendor/jquery/jquery.min.js"></script>
-	<script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="<c:url value="resources/vendor/jquery/jquery.min.js"/>"></script>
+	<script src="<c:url value="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"/>"></script>
 
 	<!-- Plugin JavaScript -->
-	<script src="resources/vendor/jquery-easing/jquery.easing.min.js"></script>
-	<script src="resources/vendor/scrollreveal/scrollreveal.min.js"></script>
-	<script src="resources/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="<c:url value="resources/vendor/jquery-easing/jquery.easing.min.js"/>"></script>
+	<script src="<c:url value="resources/vendor/scrollreveal/scrollreveal.min.js"/>"></script>
+	<script src="<c:url value="resources/vendor/magnific-popup/jquery.magnific-popup.min.js"/>"></script>
 
 	<!-- Custom scripts for this template -->
-	<script src="resources/js/creative.min.js"></script>
+	<script src="<c:url value="resources/js/creative.min.js"/>"></script>
 </body>
 </html>

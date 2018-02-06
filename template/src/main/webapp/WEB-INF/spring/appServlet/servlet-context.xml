@@ -44,7 +44,6 @@
 				<value>classpath:com/project/template/service/CityMapper.xml</value>
 			<!-- 
 				<value>classpath:ksmart/project/test26/service/IdolMapper.xml</value>
-				
 				<value>classpath:ksmart/project/test26/service/CompanyMapper.xml</value>
 				<value>classpath:ksmart/project/test26/service/CountryMapper.xml</value>
 				<value>classpath:ksmart/project/test26/service/MovieMapper.xml</value>
@@ -58,5 +57,7 @@
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg index="0" ref="sqlSessionFactory" />
 	</bean>
+	
+	<mvc:resources mapping="/**" location="classpath:/META-INF/resources/" />
 	
 </beans>
