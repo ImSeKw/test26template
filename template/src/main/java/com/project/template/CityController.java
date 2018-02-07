@@ -21,21 +21,21 @@ public class CityController {
 	private static final Logger logger = LoggerFactory.getLogger(CityController.class);
 	
 	// 도시 삭제
-	@RequestMapping(value = "/city/deleteCity", method = RequestMethod.GET)
+	@RequestMapping(value = "/City/deleteCity", method = RequestMethod.GET)
 	public String deleteCity(City city) {
 		cityDao.deleteCity(city);
 		return "redirect:/city/cityList";
 	}
 	
 	// 도시 수정 Action
-	@RequestMapping(value = "/city/updateCity", method = RequestMethod.POST)
+	@RequestMapping(value = "/City/updateCity", method = RequestMethod.POST)
 	public String updateCity(City city) {
 		cityDao.updateCity(city);
 		return "redirect:/city/cityList";
 	}
 	
 	// 도시 수정 Form
-	@RequestMapping(value = "/city/updateCity", method = RequestMethod.GET)
+	@RequestMapping(value = "/City/updateCity", method = RequestMethod.GET)
 	public String updateCity(Model model, @RequestParam(value = "cityId") int cityId) {
 		City reCity = cityDao.updateCity(cityId);
 		model.addAttribute("city", reCity);
@@ -43,14 +43,14 @@ public class CityController {
 	}
 	
 	// 도시 입력 Action
-	@RequestMapping(value = "/city/insertCity", method = RequestMethod.POST)
+	@RequestMapping(value = "/City/insertCity", method = RequestMethod.POST)
 	public String insertCity(City city) {
 		cityDao.insertCity(city);
 		return "redirect:/city/cityList";
 	}
 	
 	// 도시 입력 Form
-	@RequestMapping(value = "/city/insertCity", method = RequestMethod.GET)
+	@RequestMapping(value = "/City/insertCity", method = RequestMethod.GET)
 	public String insertCity() {
 		return "city/insertCity";
 	}

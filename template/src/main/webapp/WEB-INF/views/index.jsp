@@ -65,14 +65,12 @@
 				</div>
 			</c:forEach>
 			<div class="col-lg-4 col-sm-6">
-				<a href="resources/img/portfolio/fullsize/caterpillar-3107337_1920.jpg">
-					<div class="portfolio-box">
-						<img class="img-fluid" src="resources/img/portfolio/thumbnails/caterpillar-3107337_650.jpg" alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">PHOTO</div>
-								<div class="project-name">Bulldozer</div>
-							</div>
+				<a class="portfolio-box" href="resources/img/portfolio/fullsize/caterpillar-3107337_1920.jpg">
+					<img class="img-fluid" src="resources/img/portfolio/thumbnails/caterpillar-3107337_650.jpg" alt="">
+					<div class="portfolio-box-caption">
+						<div class="portfolio-box-caption-content">
+							<div class="project-category text-faded">PHOTO</div>
+							<div class="project-name">Bulldozer</div>
 						</div>
 					</div>
 				</a>

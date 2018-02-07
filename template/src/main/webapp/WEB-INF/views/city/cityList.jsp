@@ -51,8 +51,8 @@
 		<div class="row no-gutters popup-gallery">
 			<c:forEach var="list" items="${list}">
 				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="<c:url value="resources/img/portfolio/fullsize/1.jpg"/>">
-						<img class="img-fluid" src="<c:url value="resources/img/portfolio/thumbnails/1.jpg"/>" alt="">
+					<a class="portfolio-box" href='<c:url value="/./resources/img/portfolio/fullsize/1.jpg"/>'>
+						<img class="img-fluid" src='<c:url value="/./resources/img/portfolio/thumbnails/1.jpg"/>' alt="">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">CITY</div>
