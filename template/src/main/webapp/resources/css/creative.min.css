@@ -106,13 +106,13 @@ img::-moz-selection {
 	{
 	color: #f05f40
 }
-
+/* 
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active, #mainNav .navbar-nav>li.nav-item>a.nav-link:focus.active
 	{
 	color: #f05f40 !important;
 	background-color: transparent
 }
-
+ */
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover, #mainNav .navbar-nav>li.nav-item>a.nav-link:focus.active:hover
 	{
 	background-color: transparent
