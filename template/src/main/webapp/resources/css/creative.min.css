@@ -1,3 +1,34 @@
+input[type=text] {
+    width: 35%;
+    padding: 5px 2px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    text-align: center;
+    color: #ffffff;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* 플레이스 홀더 */
+::-webkit-input-placeholder { /* Webkit browsers */
+color: #ffffff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+color: #AB75AB;
+opacity: 1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+color: #AB75AB;
+opacity: 1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+color: #AB75AB;
+}
+
 body, html {
 	width: 100%;
 	height: 100%
@@ -30,6 +61,26 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif
+}
+
+.n-white {
+	color: #ffffff !important
+}
+
+.n-black {
+	color: #111111 !important
+}
+
+.bg-white {
+	background-color: #ffffff !important
+}
+
+.bg-black {
+	background-color: #111111 !important
+}
+
+.bg-red {
+	background-color: #ffb2b2 !important
 }
 
 .bg-primary {
@@ -283,6 +334,11 @@ header.masthead p {
 
 .text-primary {
 	color: #f05f40 !important
+}
+
+.btn-none {
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
 }
 
 .btn {
