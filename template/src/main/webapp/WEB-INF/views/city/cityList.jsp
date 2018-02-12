@@ -3,35 +3,44 @@
 <jsp:include page="/WEB-INF/views/module/headerOne.jsp"></jsp:include>
 <jsp:include page="/WEB-INF/views/module/headerTwo.jsp"></jsp:include>
 
-<section id="services">
+<!-- <section id="services">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h2 class="section-heading">CITY LIST</h2>
-				<hr class="my-4">
+				<hr class="my-3">
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section class="bg-white">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 mx-auto text-center">
+				<div>
+					<h2 class="section-heading">CITY LIST</h2>
+					<hr class="my-3">
+				</div>
 				<table class="table bg-white">
-					<thead>
+					<!-- <thead>
 						<tr>
 							<th scope="col">NAME</th>
-							<th scope="col">UPDATE</th>
-							<th scope="col">DELETE</th>
+							<th colspan="2" scope="col"></th>
 						</tr>
-					</thead>
+					</thead> -->
 					<tbody>
 						<c:forEach var="list" items="${list}">
 							<tr>
-								<td>${list.cityName}</td>
-								<td><a href="${pageContext.request.contextPath}/city/updateCity?cityId=${cityList.cityId}" class="btn rgba-teal-strong"role="button"><i class="fa fa-wrench fa-3x" aria-hidden="true"></i></a></td>
-								<td><a href="${pageContext.request.contextPath}/city/deleteCity?cityId=${cityList.cityId}" class="btn rgba-red-strong"role="button"><i class="fa fa-times-circle fa-1g" aria-hidden="true"></i></a></td>
+								<td><strong>${list.cityName}</strong></td>
+								<td>
+									<a href="${pageContext.request.contextPath}/city/updateCity?cityId=${cityList.cityId}" class="btn btn-none n-gray"role="button">
+										<i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+									</a>
+									<a href="${pageContext.request.contextPath}/city/deleteCity?cityId=${cityList.cityId}" class="btn rgba-red-strong"role="button">
+										<i class="fa fa-times fa-2x" aria-hidden="true"></i>
+									</a>
+								</td>
 							</tr>
 						</c:forEach>
 					</tbody>

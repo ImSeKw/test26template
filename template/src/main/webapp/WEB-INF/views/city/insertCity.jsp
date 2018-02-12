@@ -38,11 +38,11 @@
 					<input type="text" name="cityName" id="cityName" class="mb-3 bg-black" placeholder="이곳에 도시 이름을 입력하세요">
 					<br>
 					<button type="button" id="insertButton" class="btn btn-none n-white">
-						<i class="fa fa-check-circle fa-3x"></i>
+						<i class="fa fa-check-circle fa-2x"></i>
 					</button>
 					<!-- 취소버튼 -->
 					<button type="button" id="cancelButton" class="btn btn-none n-white">
-						<i class="fa fa-times-circle fa-3x"></i>
+						<i class="fa fa-times-circle fa-2x"></i>
 					</button>
 				</form>
 			</div>
