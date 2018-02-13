@@ -18,17 +18,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8 mx-auto text-center">
-				<div>
-					<h2 class="section-heading">CITY LIST</h2>
-					<hr class="my-3">
-				</div>
+				<h2 class="section-heading">CITY LIST</h2>
+				<hr class="my-5">
 				<table class="table bg-white">
-					<!-- <thead>
-						<tr>
-							<th scope="col">NAME</th>
-							<th colspan="2" scope="col"></th>
-						</tr>
-					</thead> -->
 					<tbody>
 						<c:forEach var="list" items="${list}">
 							<tr>
@@ -50,24 +42,5 @@
 	</div>
 </section>
 
-<section class="p-0"> <!-- id="portfolio" -->
-	<div class="container-fluid p-0">
-		<div class="row no-gutters popup-gallery">
-			<c:forEach var="list" items="${list}">
-				<div class="col-lg-4 col-sm-6">
-					<div class="portfolio-box">
-						<img class="img-fluid" src='<c:url value="/./resources/img/portfolio/thumbnails/1.jpg"/>' alt="">
-						<div class="portfolio-box-caption">
-							<div class="portfolio-box-caption-content">
-								<div class="project-category text-faded">CITY</div>
-								<div class="project-name">${list.cityName}</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</c:forEach>
-		</div>
-	</div>
-</section>
 
 <jsp:include page="/WEB-INF/views/module/bottom.jsp"></jsp:include>
